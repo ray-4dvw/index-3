@@ -112,7 +112,6 @@ function mouseMove(e) {
   console.log("mouse position: ", mouse.x, mouse.y);
 }
 
-
 //camera reset to center after mouse left window
 const mouseOut = e => {    
   camera.position.x = 0;
