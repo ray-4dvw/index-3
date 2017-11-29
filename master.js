@@ -88,6 +88,7 @@ var mouseX = 0,
 function mouseMove(e) {
   mouseX = (event.clientX - windowHalfX) / 5;
   mouseY = (event.clientY - windowHalfY) / 5;
+  
 }
 window.addEventListener('mousemove', mouseMove, false);
 
@@ -102,9 +103,9 @@ const mouseClick = e => {
   mouse.y = -(event.clientY / renderer.domElement.clientHeight) * 2 + 1;
   raycaster.setFromCamera(mouse, camera);
   var intersects = raycaster.intersectObjects(scene.children);
-  console.log('====================================');
-  console.log(intersects);
-  console.log('====================================');
+  // console.log('====================================');
+  // console.log(intersects);
+  // console.log('====================================');
   if (intersects.length > 0) {
     window.open(intersects[0].object.userData.URL, '_self');
   }
